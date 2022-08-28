@@ -1,0 +1,261 @@
+:root {
+    --fuente-principal:  'Lato', sans-serif; 
+    --primario: #da595e;
+    --obscuro: #484848;
+    --claro: #ffffff;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--fuente-principal);
+    
+}
+li {
+    list-style:none;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+@media (min-width:768px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+}
+p {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+
+/** Colores **/
+
+.Terror {
+    color: black;
+}
+.Supervivencia {
+    color: blue;
+}
+.Pelea {
+    color: red;
+}
+
+
+/** Header */
+.hero {
+    height: 100vh;
+    background-image: url(../img/fondo.png);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-position:center;
+    background-size: 150% 150%;
+    transition: background-position .3s ease;
+}
+.header {
+    align-self: start;
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navegacion a{
+    color: white;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+.navegacion a:last-of-type {
+    margin-right: 0;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contenido-hero {
+    display: -ms-flexbox;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: max-content auto;
+}
+.contenido-hero h1{
+    text-align: center;
+    font-weight: bold;
+    grid-column: 2 / 3;
+    color: white;
+    grid-row: 1 / 2;
+}
+.contenido-hero p{ 
+color: white;
+text-align: center;
+}
+
+
+
+/** Contenido Principal**/
+
+.contenedor-cards {
+ 
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+   
+}
+
+.card img {
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+.card img:hover{
+    transform: scale(1.1);
+    cursor: pointer; 
+}
+
+.card-imagen img{
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+article{
+    width: 500px;
+
+
+
+}
+
+.juegos {
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+.lista-juegos{
+    max-width: 670px;
+    float: left;
+
+}
+
+.lista{
+    width: 670px;
+}
+.info-card h3{
+   margin-left: 270px;
+   font-family: var(--fuente-principal);
+}
+.lista h2{
+    font-family: var(--fuente-principal);
+}
+.info-card p {
+    margin-left: 270px;
+    width: 300px;
+    
+    
+}
+.info-card a{
+    margin-left: 300px;
+    
+}
+.btn{
+    width: 200px;
+    display: block;
+    padding: 1rem 3rem;
+    margin-left: 300px;
+    color: black;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-decoration: none;
+   background: lightblue;
+}
+
+
+aside{
+    display: inline-block;
+    width: 300px;
+    min-height: 400px;
+    padding-left: 94px;
+}
+
+.anuncio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+.anuncio figure {
+    position: relative;
+    cursor: pointer;
+  
+}
+
+.anuncio figure .capa{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 505px;
+    background: rgba(115, 116, 116, 0.6);
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    
+}
+
+.anuncio figure:hover >.capa {
+    opacity: 1;
+    visibility: visible;
+}
+.anuncio figure:hover >.capa h3{
+  margin-top: 400px;
+  background-color: gray;
+  
+}
+.anuncio figure:hover >.capa a{
+    text-decoration: none;
+    color: red;
+    text-transform: uppercase;
+  }
+
+.anuncio img{
+   width: 300px;
+   min-height: 500px;
+   margin-right: 11px;
+}
+.anuncio img .capa{
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+.info .categoria {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+}
+.info .titulo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+}
+.info .precio {
+    color: var(--obscuro);
+    font-size: .9rem;
+}
+
+
+
+
+
